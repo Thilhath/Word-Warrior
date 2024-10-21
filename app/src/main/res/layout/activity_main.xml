@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@drawable/wb"
+
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent">
+
+
+    <!-- Score Display -->
+
+    <!-- Timer Display -->
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="148dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/txt_wd"
+        android:fontFamily="@font/agbalumo"
+        android:text="Score: 100"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timerView"
+        android:layout_width="159dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/txt_wd"
+        android:fontFamily="@font/agbalumo"
+        android:text="Time: 00:00"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Attempts Display -->
+
+    <!-- Word Length Display -->
+    <TextView
+        android:id="@+id/attemptsView"
+        android:layout_width="172dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/txt_wd"
+        android:fontFamily="@font/agbalumo"
+        android:text="Attempts: 0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreView" />
+
+    <TextView
+        android:id="@+id/wordLengthView"
+        android:layout_width="234dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/txt_wd"
+        android:fontFamily="@font/agbalumo"
+        android:text="Word Length: ?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/attemptsView" />
+
+    <!-- Guess Input Field -->
+
+    <!-- Guess Button -->
+    <EditText
+        android:id="@+id/guessInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_wd"
+        android:fontFamily="@font/aclonica"
+        android:hint="Enter your guess"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#070707"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wordLengthView" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DC9039"
+        android:drawableTint="#D72B2B"
+        android:fontFamily="@font/aclonica"
+        android:text="Guess Word"
+        android:textColor="#833F05"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guessInput" />
+
+    <!-- Letter Occurrence Button -->
+    <Button
+        android:id="@+id/letterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DC9039"
+        android:fontFamily="@font/aclonica"
+        android:text="Letter Occurrence"
+
+        android:textColor="#833F05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guessButton" />
+
+    <!-- Word Length Button -->
+    <Button
+        android:id="@+id/lengthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#DC9039"
+        android:fontFamily="@font/aclonica"
+        android:text="Word Length"
+        android:textColor="#833F05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guessButton" />
+
+    <!-- Tip Button -->
+    <Button
+        android:id="@+id/tipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DC9039"
+        android:fontFamily="@font/aclonica"
+        android:text="Get Tip"
+        android:textColor="#833F05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/letterButton" />
+
+    <!-- Result View -->
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/aclonica"
+        android:padding="16dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textColorHint="#070707"
+        android:textSize="16sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tipButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
